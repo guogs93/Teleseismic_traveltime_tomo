@@ -1,0 +1,81 @@
+#!usr/bin/zsh
+#
+# Note, if ksh is not available, you can use
+# another shell like zsh
+#
+##################################################
+##################################################
+# This script will compile all executable programs
+# that are required by the FMM based tomographic
+# inversion routine FMTT. Additional programs for
+# plotting, computing model roughness etc. are
+# also compiled. See accompanying documentation
+# for further details
+##################################################
+##################################################
+#
+# YOU MUST SPECIFY A FORTRAN 90 COMPILER!!!!
+# Compiler options can be included at this stage
+# if deemed necessary by the user.
+#
+##################################################
+#F90=ifort
+F90=gfortran
+##################################################
+# NOTE: Compilation of the code "aktsurf", which
+# computes ak135 traveltimes to the base of the
+# local 3-D model (in conjunction with "itimes"),
+# is also carried out by this script. However, you
+# must ensure that the Makefile in the subdirectory
+# "source/aktimes" points to an appropriate FORTRAN
+# compiler. Ideally, use the same compiler that
+# you use above.
+##################################################
+#
+# Enter the directory called "source" and compile
+# all programs.
+#
+##################################################
+cd MISC
+$F90 -o gmtslicet gmtslicet.f90
+echo " "
+echo "Compilation of gmtslicet complete"
+$F90 -o grid3dtg grid3dtg.f90
+echo " "
+echo "Compilation of grid3dtg complete"
+$F90 -o itimes itimes.f90
+echo " "
+echo "Compilation of itimes complete"
+$F90 -o syntht syntht.f90
+echo " "
+echo "Compilation of syntht complete"
+##################################################
+#
+# Move all executables to directory ../bin
+#
+##################################################
+mv gmtslicet grid3dtg itimes ../bin
+mv syntht ../bin
+##################################################
+#
+# Enter subdirectory "aktimes" and compile program
+# for generating traveltime tables
+#
+##################################################
+cd aktimes
+make all
+make clean
+./remodl > setbrn.out
+./setbrn > remdel.out
+##################################################
+#
+# Move "aktsurf" to ../../bin and copy binary
+# traveltime tables to ../inputfiles
+#
+##################################################
+mv aktsurf ../../bin
+cp ak135.tbl ak135.hed ../inputfiles
+##################################################
+cd ../..
+echo " "
+echo "Compilation complete"

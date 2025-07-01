@@ -1,0 +1,26 @@
+#!/bin/bash
+
+gmt set FONT_LABEL 12p,Helvetica-Bold,black
+gmt set FONT_ANNOT_PRIMARY 12p,Helvetica-Bold,black
+gmt set MAP_ANNOT_OFFSET_PRIMARY 6p
+
+model=ak135.vel
+PS=model.ps
+R=0/12/0/500
+J=X6c/-8c
+
+gmt psbasemap -R$R -J$J -Bx2f1+l"Initial 1D Velocity (km/s)" -By100f50+l"Depth (km)" -BWS -K -P > $PS
+gmt psbasemap -R$R -J$J -Ben -B0 -K -O >> $PS
+
+# Vs
+awk '{print $3,$1}' $model | gmt psxy -R -J -W1.5p,darkred -K -O >> $PS
+# Vp
+awk '{print $2,$1}' $model | gmt psxy -R -J -W1.5p,blue,6_2:2 -K -O >> $PS
+
+gmt pslegend -R$R -J$J -DjBL+w2c+o0.2c/0.2c -F -O >> $PS <<EOF
+S 0.4c - 0.5c - 1p,darkred 1c @;darkred;Vp@;;
+S 0.4c - 0.5c - 1p,blue,6_2:0 1c @;blue;Vs@;;
+EOF
+
+gmt psconvert $PS -Tf
+rm gmt*

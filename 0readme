@@ -1,0 +1,19 @@
+Teleseismic Traveltime Tomography for Isotropic / Radially Anisotropic Media
+Author: Gaoshan Guo, IGGCAS
+
+MISC: Miscellaneous codes from the FMTT package by Prof. Nicholas Rawlinson
+src_iso: Isotropic media
+src_rani: Radially anisotropic media
+demo: Example
+bin: Compiled binaries
+OPTIMIZATION: SEISCOPE OPTIMIZATION TOOLBOX
+
+Compilation Instructions
+
+cd src_iso
+make clean && make
+
+cd src_rani
+make clean && make
+
+zsh compileall

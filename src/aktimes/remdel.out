@@ -1,0 +1,100 @@
+ ndasr =        5212   modnam = ak135               
+ Layout:  do Pup
+ Mkubr:  l1 isgn =          40           1
+ Mkubr:  nseg kndx indx =           1           1         249           1
+ Layout:  do P and PKP
+ Mkdbr:  l1 l2 isgn lyr nph kph =           1          12          -1           3           1           1
+ Mkdbr:  nseg kndx indx =           2           1         249          41
+ Layout:  do PKiKP
+ Mkrbr:  l1 isgn lyr nph kph =           2          -1           2           1           1
+ Mkrbr:  nseg kndx indx =           3           1          66         194
+ Layout:  do pP
+ Mkdbr:  l1 l2 isgn lyr nph kph =           1          12           1           3           1           1
+ Mkdbr:  nseg kndx indx =           4           1         249         237
+ Layout:  do sP
+ Mkdbr:  l1 l2 isgn lyr nph kph =           1          12           2           3           1           1
+ Mkdbr:  nseg kndx indx =           5           1         249         390
+ Layout:  do pPKiKP
+ Mkrbr:  l1 isgn lyr nph kph =           2           1           2           1           1
+ Mkrbr:  nseg kndx indx =           6           1          66         543
+ Layout:  do sPKiKP
+ Mkrbr:  l1 isgn lyr nph kph =           2           2           2           1           1
+ Mkrbr:  nseg kndx indx =           7           1          66         586
+ Layout:  do PcP
+ Mkrbr:  l1 isgn lyr nph kph =           3          -1           1           1           1
+ Mkrbr:  nseg kndx indx =           8           1          98         629
+ Layout:  do ScP
+ Mkrbr:  l1 isgn lyr nph kph =           3          -2           1           2           1
+ Mkrbr:  nseg kndx indx =           9           1          98         675
+ Layout:  do SKP
+ Mkdbr:  l1 l2 isgn lyr nph kph =           1           3          -2           3           2           1
+ Mkdbr:  nseg kndx indx =          10           1          98         710
+ Layout:  do SKiKP
+ Mkrbr:  l1 isgn lyr nph kph =           2          -2           2           2           1
+ Mkrbr:  nseg kndx indx =          11           1          66         776
+ Layout:  do PKKP
+ Mkdbr:  l1 l2 isgn lyr nph kph =           1           3          -1           3           1           1
+ Mkdbr:  nseg kndx indx =          12           1          98         819
+ Layout:  do SKKP
+ Mkdbr:  l1 l2 isgn lyr nph kph =           1           3          -2           3           2           1
+ Mkdbr:  nseg kndx indx =          13           1          98         885
+ Layout:  do PP, P'P'
+ Mkdbr:  l1 l2 isgn lyr nph kph =           1          12          -1           3           1           1
+ Mkdbr:  nseg kndx indx =          14           1         249         951
+ Layout:  do Sup
+ Mkubr:  l1 isgn =          45           2
+ Mkubr:  nseg kndx indx =          15           1         325        1104
+ Layout:  do S and SKS
+ Mkdbr:  l1 l2 isgn lyr nph kph =           1          15          -2           3           2           2
+ Mkdbr:  nseg kndx indx =          16           1         325        1149
+ Layout:  do pS
+ Mkdbr:  l1 l2 isgn lyr nph kph =           1          12           1           3           2           2
+ Mkdbr:  nseg kndx indx =          17           1         249        1325
+ Layout:  do sS
+ Mkdbr:  l1 l2 isgn lyr nph kph =           1          15           2           3           2           2
+ Mkdbr:  nseg kndx indx =          18           1         325        1461
+ Layout:  do ScS
+ Mkrbr:  l1 isgn lyr nph kph =           4          -2           1           2           2
+ Mkrbr:  nseg kndx indx =          19           1         150        1637
+ Layout:  do PcS
+ Mkrbr:  l1 isgn lyr nph kph =           3          -1           1           1           2
+ Mkrbr:  nseg kndx indx =          20           1          98        1692
+ Layout:  do PKS
+ Mkdbr:  l1 l2 isgn lyr nph kph =           1           3          -1           3           1           2
+ Mkdbr:  nseg kndx indx =          21           1          98        1727
+ Layout:  do PKKS
+ Mkdbr:  l1 l2 isgn lyr nph kph =           1           3          -1           3           1           2
+ Mkdbr:  nseg kndx indx =          22           1          98        1793
+ Layout:  do SKKS
+ Mkdbr:  l1 l2 isgn lyr nph kph =           1           3          -2           3           2           2
+ Mkdbr:  nseg kndx indx =          23           1         129        1859
+ Layout:  do SS and S'S'
+ Mkdbr:  l1 l2 isgn lyr nph kph =           1          15          -2           3           2           2
+ Mkdbr:  nseg kndx indx =          24           1         325        1948
+ Layout:  do SP
+ Mkcbr:  l1 l2 isgn lyr nph kph =           4          12          -2           1           2           1
+ Mkcbr:  nseg kndx indx =          25         150         249        2124
+ Mkcbr:  start loop
+ kph:  kph ik j l code =           1           4         150         163  tP      
+ phcd:  in ik phcd =           5           4  SP      
+ kph:  kph ik j l code =           1           6         169         177  tP      
+ phcd:  in ik phcd =           5           6  SP      
+ kph:  kph ik j l code =           1           8         181         202  tPn     
+ phcd:  in ik phcd =           5           8  SPn     
+ kph:  kph ik j l code =           1          12         244         249  tPg     
+ phcd:  in ik phcd =           7          12  SPg     
+ Layout:  do PS
+ Mkcbr:  l1 l2 isgn lyr nph kph =           4          12          -1           1           1           2
+ Mkcbr:  nseg kndx indx =          26         150         249        2162
+ Mkcbr:  start loop
+ nph:  nph in j l code =           1           4         150         163  tP      
+ phcd:  in ik phcd =           4           5  PS      
+ nph:  nph in j l code =           1           6         169         177  tP      
+ phcd:  in ik phcd =           6           5  PS      
+ nph:  nph in j l code =           1           8         181         202  tPn     
+ phcd:  in ik phcd =           8           5  PnS     
+ nph:  nph in j l code =           1          12         244         249  tPg     
+ phcd:  in ik phcd =          12           7  PgS     
+ reclength for direct access        2360
+ header file  :ak135.hed
+ table file   :ak135.tbl
