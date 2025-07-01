@@ -3,9 +3,16 @@ Code Author: Gaoshan Guo
 Affiliation: Institute of Geology and Geophysics, Chinese Academy of Sciences (IGGCAS)
 
 This code was developed during Gaoshan Guo's Master's study at IGGCAS under the supervision of Haiqiang Lan.
-It includes both forward and adjoint solvers and is integrated with the SEISCOPE Optimization Toolbox for inversion.
 
-If you use this code in your research, please cite the following publication:
+The forward modeling is based on an eikonal solver.
+
+The gradient computation is based on the adjoint-state technique.
+
+The inverse problem is solved within the framework of the open-source SEISCOPE OPTIMIZATION TOOLBOX (benefiting from the PhD study of Gaoshan Guo at GEOAZUR).
+
+If you use this code in your research or publication, please cite the following paper:
+
+```bibtex
 
 @article{https://doi.org/10.1029/2024GL112604,
   author  = {Guo, Gaoshan and Lan, Haiqiang and Chen, Ling and Meng, Lingkai and Badal, José},
