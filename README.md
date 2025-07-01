@@ -17,3 +17,5 @@ If you use this code in your research, please cite the following publication:
   year    = {2025},
   doi     = {https://doi.org/10.1029/2024GL112604}
 }
+
+This code is licensed under CC BY-NC 4.0. Commercial use is not permitted. Please contact the author (Gaoshan Guo) for licensing inquiries related to commercial applications.
